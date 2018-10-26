@@ -5,11 +5,15 @@
 
   <!-- <p *ngIf="joke">{{ joke.value }}</p> -->
 
-  <div>
+  <p style="font-size: 20px; color: white">{{code}}</p>
+
+  <button type="button" (click)="scan()">SCanner</button>
+
+  <!-- <div>
     <barcode-scanner-livestream type="code_128"
       (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
     <div [hidden]="!barcodeValue">
       {{barcodeValue}}
     </div>
-  </div>
+  </div> -->
 </div>

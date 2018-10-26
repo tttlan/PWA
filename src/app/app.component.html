@@ -6,7 +6,7 @@
   <!-- <p *ngIf="joke">{{ joke.value }}</p> -->
 
   <div>
-    <barcode-scanner-livestream type="codabar"
+    <barcode-scanner-livestream type="code_93"
       (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
     <div [hidden]="!barcodeValue">
       {{barcodeValue}}

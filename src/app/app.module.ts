@@ -17,7 +17,7 @@ import { BarecodeScannerLivestreamModule } from 'ngx-barcode-scanner';
     BrowserModule,
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true }),
-    BarecodeScannerLivestreamModule 
+    BarecodeScannerLivestreamModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

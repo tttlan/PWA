@@ -1,17 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
- 
+
   <h1>Jokes</h1>
-  
+
   <!-- <p *ngIf="joke">{{ joke.value }}</p> -->
 
   <p style="font-size: 20px; color: white">{{code}}</p>
 
   <button type="button" (click)="scan()">SCanner</button>
 
-  <p>
-    <barcode-scanner-livestream type="code_128" (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
+  <div>
+    <barcode-scanner-livestream type="code_128"
+      (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
     <div [hidden]="!barcodeValue">
-        {{barcodeValue}}
+      {{barcodeValue}}
     </div>
-  </p>
+  </div>
+</div>

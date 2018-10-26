@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
+import { BarecodeScannerLivestreamModule } from 'ngx-barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true }),
+    BarecodeScannerLivestreamModule 
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

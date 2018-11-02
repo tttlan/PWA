@@ -1,0 +1,73 @@
+:invalid {
+  @include box-shadow(none);
+}
+
+a,
+button {
+  box-sizing: border-box;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: 0;
+  }
+}
+
+body,
+html {
+  font-size: $font-size;
+  min-height: 100%;
+}
+
+// html {
+//   @include media-breakpoint-up(md) {
+//     background-color: $gray-200;
+//   }
+// }
+
+body {
+  // max-width: $body-max-width;
+  // margin: 0 auto;
+  @media screen and (max-width: $body-max-width - 1) and (orientation: landscape) {
+    overflow: hidden;
+  }
+}
+
+button {
+  &.active.focus,
+  &.active:focus,
+  &.focus,
+  &:active.focus,
+  &:active:focus,
+  &:focus {
+    @include box-shadow(none);
+    outline: 0;
+  }
+}
+/* Prevent change landscape to portrait mode */
+.view-landscape {
+  display: none;
+
+  @media screen and (max-width: $body-max-width - 1) and (orientation: landscape) {
+    @include flexbox;
+    @include justify-content(center);
+    @include align(center);
+    @include flex-direction(row);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: $gray-200;
+
+    &__image {
+      background-image: url("#{$assets-image-path}pages/view-landscape.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 220px;
+      height: 194px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div [formGroup]="group" class="form-group">
+  <label [for]="field.name">{{ field.label | translate }}</label>
+  <input type="input" [formControlName]="field.name" [placeholder]="field.label | translate" [type]="field.inputType" [id]="field.name" class="form-control" />
+  <ng-container *ngFor="let validation of field.validations;">
+    <span *ngIf="group.get(field.name).hasError(validation.name) && group.get(field.name).touched" class="small text-danger">
+      {{ validation.message ? validation.message : 'Field is required.' | translate }}
+    </span>
+  </ng-container>
+</div>

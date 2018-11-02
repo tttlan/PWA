@@ -1,0 +1,40 @@
+/**
+ *  Bootstrap variables to override bootstrap default variables
+ */
+
+@import './bootstrap/functions';
+@import './bootstrap-customized/variables';
+
+/**
+ *  App variables
+ */
+
+@import './app/variables';
+
+/**
+ *  Bootstrap Components
+ */
+
+@import './bootstrap-customized/bootstrap';
+// Font Awesome
+// @import './fontawesome-customized.scss';
+/**
+ *  App Styles
+ */
+ @import './app/base';
+ @import './app/auth';
+
+ // App components
+ @import './app/components/checkboxes';
+ @import './app/components/radio-buttons';
+ @import './app/components/spinner';
+// App Partials
+@import './app/layouts/layout';
+@import './app/layouts/sidebar';
+@import './app/layouts/header';
+@import './app/layouts/footer';
+/*
+ * Angular Material
+ */
+
+@import './app/material';

@@ -1,0 +1,14 @@
+<header class="auth__header">
+  <img src="/assets/images/pages/derendinger.svg" alt="" class="auth__logo"/>
+</header>
+<main class="auth__main">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer class="auth__footer">
+  <div class="container text-center">
+    © SAG Austria Handels GmbH, Austria
+  </div>
+</footer>
+<div class="spinner" [hidden]="!isLoading"></div>

@@ -1,0 +1,9 @@
+<div [class]="'wrapper ' + pageClass" [ngClass]="{'sidebar-expanded': isActiveSidebar}">
+  <app-header></app-header>
+  <main role="main" class="main">
+    <router-outlet></router-outlet>
+  </main>
+  <app-sidebar></app-sidebar>
+  <div class="sidebar-overlay" (click)="toggleSidebar()"></div>
+</div>
+<div class="spinner" [hidden]="!isLoading"></div>

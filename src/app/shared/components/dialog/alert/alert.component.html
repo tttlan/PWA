@@ -1,0 +1,39 @@
+<div bsModal #modal="bs-modal" class="modal modal-confirmation" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-confirmation-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-xs-center">
+        <div class="row" *ngIf="!alertMessage">
+          <div class="col-xs-12 modal-title" *ngIf="title">
+            {{ params.title | translate }}
+          </div>
+          <div class="col-xs-12 modal-content" *ngIf="params.content">
+            {{ params.content | translate }}
+          </div>
+          <div class="col-xs-12 modal-description" *ngIf="!params.description"></div>
+          <div class="col-xs-12 modal-description" *ngIf="params.description">
+            {{ params.description | translate }}
+          </div>
+        </div>
+        <div class="row" *ngIf="alertMessage">
+          <div class="col-xs-12 modal-title" *ngIf="title">
+            {{ params.title | translate }}
+          </div>
+          <div class="col-xs-12 modal-content">
+            {{ alertMessage | translate }}
+          </div>
+          <div class="col-xs-12 modal-description"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-xs-right">
+            <button *ngIf="!alertMessage" type="button" class="btn btn-secondary" (click)="doCancel()">
+              {{ 'Cancel' | translate }}
+            </button>
+            <button *ngIf="alertMessage" type="button" class="btn btn-secondary" (click)="doCancel()">
+              {{ 'Close' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

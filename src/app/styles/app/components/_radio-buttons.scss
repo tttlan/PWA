@@ -1,0 +1,96 @@
+/***************
+Radio Buttons
+***************/
+
+[type="radio"] {
+    +label {
+        margin: 5px 0;
+        @include user-select();
+        &:after,
+        &:before {
+            content : '';
+            position: absolute;
+            left    : 0;
+            top     : 0;
+            margin  : 4px;
+            width   : 16px;
+            height  : 16px;
+            z-index : 0;
+            @include border-radius(100%);
+            @include transition(.28s ease);
+        }
+    }
+    &:checked,
+    &:not(:checked) {
+        /* Remove default Radio Buttons */
+        position  : absolute;
+        left      : -9999px;
+        visibility: hidden;
+        +label {
+            position    : relative;
+            padding-left: 25px;
+            cursor      : pointer;
+            display     : inline-block;
+            height      : 25px;
+            line-height : 25px;
+            font-size   : 1rem;
+            @include transition(.28s ease);
+        }
+    }
+    /* Unchecked styles */
+    &:not(:checked) {
+        +label {
+            &:before {
+                border: 2px solid $gray-300;
+            }
+            &:after {
+                background-color: $gray-300;
+                // border       : 2px solid $gray-300;
+                z-index: -1;
+                // @include transform(scale(0));
+            }
+        }
+    }
+    /* Checked styles */
+    &:checked,
+    &:hover {
+        +label {
+            &:before {
+                border: 2px solid $primary;
+            }
+            &:after {
+                background-color: $primary;
+                z-index         : 0;
+                // @include transform(scale(.5));
+            }
+        }
+    }
+    &:hover {
+        +label {
+            color: $primary;
+        }
+    }
+    &:checked {
+        +label {
+            &:after {
+                border: 2px solid $primary;
+            }
+        }
+    }
+    /* Disabled style */
+    &:disabled:checked+label:before,
+    &:disabled:not(:checked)+label:before {
+        background-color: transparent;
+        border-color    : $gray-300;
+    }
+    &:disabled+label {
+        color: $gray-300;
+    }
+    &:disabled:not(:checked)+label:before {
+        border-color: $gray-300;
+    }
+    &:disabled:checked+label:after {
+        background-color: $gray-300;
+        border-color    : $gray-300;
+    }
+}

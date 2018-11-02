@@ -1,0 +1,6 @@
+<div [formGroup]="group" class="form-group">
+  <label [for]="field.label">{{ field.label | translate }}</label>
+  <select [formControlName]="field.name" [id]="field.label" class="form-control">
+    <option *ngFor="let item of field.options" [value]="item.key" [selected]="item.key === field.value">{{ item.name | translate }}</option>
+  </select>
+</div>

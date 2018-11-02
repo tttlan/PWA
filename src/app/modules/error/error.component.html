@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="text-center mt-4">
+    {{ 'Error' | translate }}
+  </h2>
+  <p class="text-center">
+    {{ 'The page you are looking for does not exist or has been moved.' | translate }}
+  </p>
+  <p class="text-center mt-4">
+    <a class="btn btn-primary" [routerLink]="['/']">
+      {{ 'Return to the app' | translate }}
+    </a>
+  </p>
+</div>

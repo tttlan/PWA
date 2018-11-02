@@ -1,25 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { COMPONENTS, MODULES, PIPES, PROVIDERS } from '@app/app.imports';
 
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-
-import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './data.service';
-import { BarecodeScannerLivestreamModule } from 'ngx-barcode-scanner';
+// App Components
+import { AppRoutes } from '@app/app.routes';
+import { AppComponent } from '@app/app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PIPES,
+    COMPONENTS
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true }),
-    BarecodeScannerLivestreamModule
+    MODULES,
+    AppRoutes
   ],
-  providers: [DataService],
+  providers: [
+    PROVIDERS
+  ],
+  entryComponents: [
+    COMPONENTS
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

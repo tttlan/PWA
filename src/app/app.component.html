@@ -1,15 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<router-outlet></router-outlet>
 
-  <h1>Jokes</h1>
-
-  <!-- <p *ngIf="joke">{{ joke.value }}</p> -->
-
-  <div>
-    <barcode-scanner-livestream type="code_93"
-      (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
-    <div [hidden]="!barcodeValue">
-      {{barcodeValue}}
-    </div>
+<div class="view-landscape">
+  <div class="view-landscape__image"></div>
+  <div class="view-landscape__content">
+    <h5>{{ 'Please rotate your device' | translate }}</h5>
+    <p>{{ 'We offer best experience on portrait mode' | translate }}</p>
   </div>
 </div>

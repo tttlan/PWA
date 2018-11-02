@@ -1,0 +1,26 @@
+<div class="sidebar__header">
+  <div *ngIf="isAuthenticated" class="sidebar__user">
+    <span class="d-block">{{ user.firstName + ' ' + user.lastName }}</span>
+    <span class="d-block">{{ user.email }}</span>
+  </div>
+</div>
+<div class="sidebar__body">
+  <ul class="sidebar__nav">
+    <li *ngFor="let page of pages" class="sidebar__item">
+      <button (click)="navigate(page.route)" class="btn btn-link sidebar__link" [routerLink]="['/', page.route]" [routerLinkActive]="['active']">
+        <span class="sidebar__icon">
+          <mat-icon matSuffix>{{ page.icon }}</mat-icon>
+        </span>
+        <span class="sidebar__label">{{ page.name | translate }}</span>
+      </button>
+    </li>
+    <li class="sidebar__item">
+      <button (click)="doSignOut()" class="btn btn-link sidebar__link">
+        <span class="sidebar__icon">
+          <mat-icon matSuffix>power_settings_new</mat-icon>
+        </span>
+        <span class="sidebar__label">{{ 'Sign Out' | translate }}</span>
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+<header class="header">
+  <nav class="navbar navbar-light header__wrapper">
+    <div class="header__navbar">
+      <div class="header__navbar-left">
+        <img src="/assets/images/pages/derendinger-logo.svg" class="header__logo" alt="" />
+        <div class="header__title">
+          <span class="header__back-icon">
+            <mat-icon matSuffix>arrow_back</mat-icon>
+          </span>
+          {{ pageTitle }}
+        </div>
+      </div>
+      <ul class="header__navbar-right">
+        <li class="header__item">
+          <a class="header__link" [routerLink]="['/auth/sign-in']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon matSuffix>shopping_cart</mat-icon>
+          </a>
+        </li>
+        <li class="header__item">
+          <button class="btn header__link" (click)="toggleSidebar()">
+            <mat-icon matSuffix>menu</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<app-dialog #dialog></app-dialog>

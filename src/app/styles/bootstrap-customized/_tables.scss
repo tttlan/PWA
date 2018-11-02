@@ -1,0 +1,14 @@
+// Bootstrap Tables component
+@import './bootstrap/tables'; /**
+ * ==============================
+ *  If you want to override some bootstrap styles, you have to code below.
+ * ==============================
+ */
+
+.table {
+  margin-bottom: 0;
+
+  thead th {
+    border-top-width: 0;
+  }
+}

@@ -1,0 +1,69 @@
+/*
+ * Angular Material
+ */
+@import '~@angular/material/theming';
+@include mat-core();
+$mat-blue: (
+  50: #e3f2fd,
+  100: #bbdefb,
+  200: #90caf9,
+  300: #64b5f6,
+  400: #5fbfff, // For RapidBox
+  500: $primary, // For RapidBox
+  600: #1e88e5,
+  700: #1976d2,
+  800: #1565c0,
+  900: #003252, // For RapidBox
+  A100: #82b1ff,
+  A200: #448aff,
+  A400: #2979ff,
+  A700: #2962ff,
+  contrast: (50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $dark-primary-text, 400: $dark-primary-text, 500: $light-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, A100: $dark-primary-text, A200: $light-primary-text, A400: $light-primary-text, A700: $light-primary-text,)
+);
+$primary: mat-palette($mat-blue, 500);
+$accent: mat-palette($mat-light-blue, 500, 400, 900);
+$warn: mat-palette($mat-red, 500);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+.mat-form-field-appearance-legacy {
+  .mat-form-field-flex {
+    @include align(center);
+  }
+  .mat-form-field-infix {
+    border-top-width: 0;
+  }
+  .mat-form-field-wrapper {
+    @include border-radius($input-border-radius);
+    border: 1px solid $input-border-color;
+    padding: 1rem $input-btn-padding-x;
+  }
+
+  .mat-form-field-label-wrapper {
+    top: -0.6375em;
+  }
+
+  .mat-form-field-ripple {
+    height: 3px !important;
+  }
+
+  .mat-form-field-underline {
+    height: 3px !important;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+  }
+
+  &.mat-form-field-invalid:not(.mat-focused) {
+    .mat-form-field-ripple {
+      height: 3px !important;
+    }
+  }
+
+  .mat-form-field-prefix,
+  .mat-form-field-suffix {
+    .mat-icon {
+      color: $input-placeholder-color;
+    }
+  }
+}

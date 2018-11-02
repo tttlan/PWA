@@ -1,0 +1,20 @@
+<section *ngFor="let section of sections" class="card card--dashboard">
+  <div class="card-body">
+    <div class="media">
+      <div class="media-body">
+        <h4 class="card-subtitle card--dashboard__subtitle">{{ section.title }}</h4>
+        <h3 class="card-title card--dashboard__title">{{ section.name }}</h3>
+      </div>
+      <div class="media-right">
+        <img src="/assets/images/sections/{{ section.icon }}" class="media-object card--dashboard__icon" alt="{{ section.name }}"/>
+      </div>
+    </div>
+    <ul class="list-inline m-0">
+      <li *ngFor="let action of section.actions" class="list-inline-item mr-4">
+        <a [routerLink]="action.router" class="card--dashboard__link">
+          {{ action.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

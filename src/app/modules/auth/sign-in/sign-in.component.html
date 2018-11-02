@@ -1,0 +1,44 @@
+<form (ngSubmit)="doSignIn(form)" ngNativeValidate [formGroup]="form">
+  <div class="form-group mb-5 text-center">
+    <h2>{{ 'Welcome!' | translate }}</h2>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="w-100">
+      <input formControlName="username" type="text" matInput [placeholder]="'Username' | translate" />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <small [hidden]="form.controls.username.valid
+            || !form.controls.username.touched
+            || (form.controls.username.pristine)" class="text-danger">
+      {{ 'Field is required.' | translate }}
+    </small>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="w-100">
+      <input formControlName="password" [type]="showPassword ? 'text' : 'password'" matInput [placeholder]="'Password' | translate" />
+      <mat-icon matSuffix (click)="showHidePassword()">
+        {{ showPassword ? 'visibility_off': 'visibility'}}
+      </mat-icon>
+    </mat-form-field>
+    <small [hidden]="form.controls.password.valid
+            || !form.controls.password.touched
+            || (form.controls.password.pristine)" class="text-danger">
+      {{ 'Field is required.' | translate }}
+    </small>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-block">{{ 'Sign in' | translate }}</button>
+  </div>
+</form>
+<div class="modal" bsModal #modal="bs-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        {{ errorMessage | translate }}
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-default btn-sm btn-block" (click)="modal.hide()">{{ 'Close' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>

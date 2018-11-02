@@ -1,0 +1,24 @@
+<div [class]="'modal full'" bsModal #modal="bs-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div *ngIf="params.title" class="modal-header">
+        {{ params.title | translate }}
+      </div>
+      <div class="modal-body">
+        <div *ngIf="params.description" class="row">
+          <div class="col col-12 text-center">
+            {{ params.description | translate }}
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="doSubmit()">
+          {{ 'OK' | translate }}
+        </button>
+        <button type="button" class="btn" (click)="doCancel()">
+          {{ 'Cancel' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

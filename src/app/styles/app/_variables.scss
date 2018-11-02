@@ -1,0 +1,20 @@
+// Bootstrap variables to override bootstrap default variables
+@import './bootstrap/functions';
+@import '../bootstrap-customized/variables';
+@import '../bootstrap-customized/mixins';
+/**
+  *  App variables
+  */
+// Body
+$body-max-width: map-get($grid-breakpoints, 'md') !default;
+$border-divider: $gray-400 !default;
+// Fonts
+$font-size: 16px !default;
+// Assets Url
+$assets-image-path: '/assets/images/' !default;
+// Header
+$header-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05) !default;
+$header-logo-max-height: 32px !default; 
+// Sidebar
+$sidebar-max-width: 300px;
+$sidebar-avatar-max-width: 64px;

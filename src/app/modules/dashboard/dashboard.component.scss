@@ -1,0 +1,23 @@
+@import 'app/variables';
+.card {
+  &--dashboard {
+    &:not(:last-child) {
+      margin-bottom: $spacers-sm;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    &__subtitle {
+      font-weight: 400;
+      font-size: 1rem;
+      margin-bottom: $spacers-xs;
+    }
+    &__icon {
+      max-width: 80px;
+    }
+    &__link {
+      font-weight: 600;
+    }
+  }
+}

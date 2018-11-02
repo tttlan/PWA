@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "APP_NAME"
+msgstr "RapidBox - Swiss Automotive Group AG"
+
+msgid "DEFAULT_TITLE"
+msgstr "RapidBox - Swiss Automotive Group AG"
+
+msgid "DEFAULT_META_DESCRIPTION"
+msgstr "Die Swiss Automotive Group ist eine Unternehmensgruppe im Besitz von zwei Schweizer Familien,die eine komplette Dienstleistungspalette für den Fahrzeugunterhaltsmarkt."
+
+msgid "Bad credentials"
+msgstr "Ihre Registrierung ist nicht korrekt! Bitte überprüfen Sie, ob Sie Benutzername und Passwort korrekt eingegeben haben."
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Field is required."
+msgstr "Feld ist erforderlich."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Password"
+msgstr "Passwort"
+
+msgid "Please rotate your device"
+msgstr "Bitte drehen Sie Ihr Gerät in die horizontale Ansicht"
+
+msgid "Sign in"
+msgstr "Einloggen"
+
+msgid "Username"
+msgstr "Benutzernamen"
+
+msgid "We offer best experience on portrait mode"
+msgstr "Wir bieten beste Erlebnisse im Hochformat"
+
+msgid "Welcome!"
+msgstr "Willkommen!"

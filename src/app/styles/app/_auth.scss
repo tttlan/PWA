@@ -1,0 +1,46 @@
+.auth {
+  @include flexbox;
+  @include flex-direction(column);
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__header {
+    @include flexbox;
+    @include align(center);
+    @include justify-content(center);
+    height: 160px;
+    background-color: $primary;
+    position: relative;
+    margin-bottom: 100px;
+    &:after {
+      @include border-radius(100%);
+      background-color: $primary;
+      content: '';
+      height: 150px;
+      position: absolute;
+      bottom: -50px;
+      left: -100px;
+      right: -100px;
+      z-index: 0;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    max-width: 220px;
+  }
+  &__main {
+    @include flexbox;
+    @include flex(1);
+    width: 100%;
+  }
+  &__footer {
+    padding: $spacers-sm 0;
+    font-size: .85rem;
+  }
+}

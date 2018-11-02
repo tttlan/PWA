@@ -1,0 +1,4 @@
+<div [formGroup]="group" class="form-group">
+  <input type="checkbox" [formControlName]="field.name" [id]="field.name" />
+  <label [for]="field.name">{{ field.label | translate }}</label>
+</div>
